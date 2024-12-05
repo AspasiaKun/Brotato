@@ -77,7 +77,7 @@ public class EnemyBase : MonoBehaviour
         if (Player.instance.isDead){
             return;
         }
-        Move();
+        // Move();
         if (isContact && !isCooling) {
             Attack();
         }

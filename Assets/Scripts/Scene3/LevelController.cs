@@ -16,6 +16,7 @@ public class LevelController : MonoBehaviour
     public GameObject _enemy1_Prefab;
     public List<EnemyBase> enemy_list = new List<EnemyBase>();
     public Transform map;
+    public Transform enemy_parent;
 
     void Awake() {
         instance = this;
@@ -24,6 +25,7 @@ public class LevelController : MonoBehaviour
         _enemy1_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_1");
 
         map = Utils.Instance.findGameObject("Map").transform;
+        enemy_parent = Utils.Instance.findGameObject("Enemies").transform;
     }
     // Start is called before the first frame update
     void Start()
@@ -46,7 +48,7 @@ public class LevelController : MonoBehaviour
             Bounds bounds = map.GetComponent<SpriteRenderer>().bounds;
             Vector3 spawnPoint = GetRandomPoint(bounds);
             // 敌人重生
-            EnemyBase go = Instantiate(_enemy1_Prefab, spawnPoint, Quaternion.identity).GetComponent<EnemyBase>();
+            EnemyBase go = Instantiate(_enemy1_Prefab, spawnPoint, Quaternion.identity, enemy_parent).GetComponent<EnemyBase>();
             enemy_list.Add(go);
 
         }

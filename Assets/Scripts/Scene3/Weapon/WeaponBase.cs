@@ -55,7 +55,7 @@ public class WeaponBase: MonoBehaviour
 
     IEnumerator GoPosition()
     {
-        var enemyPos = enemy.position + new Vector3(0, enemy.GetComponent<SpriteRenderer>().size.y, 0);
+        Vector3 enemyPos = enemy.position + new Vector3(0, enemy.GetComponent<SpriteRenderer>().size.y / 2, 0);
         // 飞向敌人
         while (Vector2.Distance(transform.position, enemyPos) > 0.1f) {
             Vector3 dir = (enemyPos - transform.position).normalized;

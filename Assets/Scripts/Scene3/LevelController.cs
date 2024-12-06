@@ -36,10 +36,10 @@ public class LevelController : MonoBehaviour
         _failPanel = Utils.Instance.findGameObject("FailPanel");
         _successPanel = Utils.Instance.findGameObject("SuccessPanel");
         _enemy1_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_1");
-        // _enemy2_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_2");
-        // _enemy3_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_3");
-        // _enemy4_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_4");
-        // _enemy5_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_5");
+        _enemy2_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_2");
+        _enemy3_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_3");
+        _enemy4_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_4");
+        _enemy5_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_5");
 
         map = Utils.Instance.findGameObject("Map").transform;
         enemy_parent = Utils.Instance.findGameObject("Enemies").transform;
@@ -48,10 +48,10 @@ public class LevelController : MonoBehaviour
         levelDatas = JsonConvert.DeserializeObject<List<LevelData>>(levelTextAsset.text);
     
         enemyPrefabsDic.Add("enemy1",_enemy1_Prefab);
-        // enemyPrefabsDic.Add("enemy2",_enemy2_Prefab);
-        // enemyPrefabsDic.Add("enemy3",_enemy3_Prefab);
-        // enemyPrefabsDic.Add("enemy4",_enemy4_Prefab);
-        // enemyPrefabsDic.Add("enemy5",_enemy5_Prefab);
+        enemyPrefabsDic.Add("enemy2",_enemy2_Prefab);
+        enemyPrefabsDic.Add("enemy3",_enemy3_Prefab);
+        enemyPrefabsDic.Add("enemy4",_enemy4_Prefab);
+        enemyPrefabsDic.Add("enemy5",_enemy5_Prefab);
 
     }
 

@@ -1,6 +1,5 @@
 
 public class Enemy1: EnemyBase {
-    public static EnemyData enemy1Data;
     void Start() {
         EnemyData enemy1Data = GameManager.instance.enemyDatas[0];
 

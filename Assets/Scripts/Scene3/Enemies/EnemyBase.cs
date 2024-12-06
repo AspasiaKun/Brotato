@@ -29,7 +29,6 @@ public class EnemyBase : MonoBehaviour
         Vector2 dir = (Player.instance.transform.position - transform.position).normalized;
         Vector2 result = dir * speed * Time.deltaTime;
         transform.Translate(result);
-        TurnAround();
     }
 
     // 自动转向
@@ -97,6 +96,10 @@ public class EnemyBase : MonoBehaviour
             }
         }
 
+    }
+
+    void LateUpdate() {
+        TurnAround();
     }
 
     public void OnTriggerEnter2D(Collider2D other) {

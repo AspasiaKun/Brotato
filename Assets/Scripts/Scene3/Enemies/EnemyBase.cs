@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class EnemyBase : MonoBehaviour
 {
+    public int id;
     public float hp;
     public float speed;
     public float attackInternal;
     public float damage;
+    public float provideExp = 1;
+    public float skillTime;
+    public float range;
+
+
+    // =============================
     public float attackTimer = 0;
     public bool isContact = false; // 是否接触到玩家
     public bool isCooling = false;
-    public int provideExp = 1;
     public GameObject moneyPrefab;
     void Awake()
     {

@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -14,44 +15,95 @@ public class LevelController : MonoBehaviour
     public GameObject _failPanel;
     public GameObject _successPanel;
     public GameObject _enemy1_Prefab;
+    public GameObject _enemy2_Prefab;
+    public GameObject _enemy3_Prefab;
+    public GameObject _enemy4_Prefab;
+    public GameObject _enemy5_Prefab;
+
+    public GameObject _redCross_Prefab;
     public List<EnemyBase> enemy_list = new List<EnemyBase>();
     public Transform map;
     public Transform enemy_parent;
+    private TextAsset levelTextAsset;
+    private List<LevelData> levelDatas = new List<LevelData>();
+    private LevelData currentLevelData;
+
+    public Dictionary<String, GameObject> enemyPrefabsDic = new Dictionary<string, GameObject>();
+
 
     void Awake() {
         instance = this;
         _failPanel = Utils.Instance.findGameObject("FailPanel");
         _successPanel = Utils.Instance.findGameObject("SuccessPanel");
         _enemy1_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_1");
+        // _enemy2_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_2");
+        // _enemy3_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_3");
+        // _enemy4_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_4");
+        // _enemy5_Prefab = Resources.Load<GameObject>("Prefabs/Enemy_5");
 
         map = Utils.Instance.findGameObject("Map").transform;
         enemy_parent = Utils.Instance.findGameObject("Enemies").transform;
+        _redCross_Prefab = Resources.Load<GameObject>("Prefabs/RedCross");
+        levelTextAsset = Resources.Load<TextAsset>("Data/level0");
+        levelDatas = JsonConvert.DeserializeObject<List<LevelData>>(levelTextAsset.text);
+    
+        enemyPrefabsDic.Add("enemy1",_enemy1_Prefab);
+        // enemyPrefabsDic.Add("enemy2",_enemy2_Prefab);
+        // enemyPrefabsDic.Add("enemy3",_enemy3_Prefab);
+        // enemyPrefabsDic.Add("enemy4",_enemy4_Prefab);
+        // enemyPrefabsDic.Add("enemy5",_enemy5_Prefab);
+
     }
+
     // Start is called before the first frame update
     void Start()
     {
-        waveTimer = 15 + 5 * GameManager.instance.currentWave;
+        currentLevelData = levelDatas[GameManager.instance.currentWave - 1];
+        waveTimer = currentLevelData.waveTimer;
 
         GenerateEnemy();
     }
 
     private void GenerateEnemy()
     {
-        StartCoroutine(SpawnEnemy());
+        foreach(WaveData enemyData in currentLevelData.enemys) {
+            // 一波生成多个敌人
+            for (int i=0; i< enemyData.count; i++) {
+                StartCoroutine(SpawnEnemy(enemyData));
+            }
+        }
+        
     }
 
-    IEnumerator SpawnEnemy()
+    IEnumerator SpawnEnemy(WaveData enemyData)
     {
-        while(waveTimer >=0 && !Player.instance.isDead) {
-            yield return new WaitForSeconds(0.5f);
-            
+        yield return new WaitForSeconds(enemyData.timeAxis);
+
+        if (waveTimer >=0 && !Player.instance.isDead) {
             Bounds bounds = map.GetComponent<SpriteRenderer>().bounds;
             Vector3 spawnPoint = GetRandomPoint(bounds);
-            // 敌人重生
-            EnemyBase go = Instantiate(_enemy1_Prefab, spawnPoint, Quaternion.identity, enemy_parent).GetComponent<EnemyBase>();
-            enemy_list.Add(go);
+            GameObject redCross = Instantiate(_redCross_Prefab, spawnPoint, Quaternion.identity);
+            yield return new WaitForSeconds(1.0f);
+            Destroy(redCross);
+
+            if (waveTimer >=0 && !Player.instance.isDead) {
+                EnemyBase enemy = Instantiate(enemyPrefabsDic[enemyData.enemyName],spawnPoint,Quaternion.identity,enemy_parent).GetComponent<EnemyBase>();
+                enemy_list.Add(enemy);
+            }
 
         }
+
+        // while(waveTimer >=0 && !Player.instance.isDead) {
+        //     yield return new WaitForSeconds(0.5f);
+            
+        //     Bounds bounds = map.GetComponent<SpriteRenderer>().bounds;
+        //     Vector3 spawnPoint = GetRandomPoint(bounds);
+        //     // 敌人重生
+        //     Instantiate(_redCross_Prefab, spawnPoint, Quaternion.identity);
+        //     // EnemyBase go = Instantiate(_enemy1_Prefab, spawnPoint, Quaternion.identity, enemy_parent).GetComponent<EnemyBase>();
+        //     // enemy_list.Add(go);
+
+        // }
     }
 
     private Vector3 GetRandomPoint(Bounds bounds)

@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using Newtonsoft.Json;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
@@ -10,9 +11,18 @@ public class GameManager : MonoBehaviour
     public DifficultyData currentDifficultyData;
     public int currentWave = 1;
 
+    public TextAsset enemyTextAsset;
+    public List<EnemyData> enemyDatas = new List<EnemyData>();
+
+
     public void Awake()
     {
         instance = this;
+        enemyTextAsset = Resources.Load<TextAsset>("Data/enemy");
+        enemyDatas = JsonConvert.DeserializeObject<List<EnemyData>>(enemyTextAsset.text);
+        if (enemyDatas == null) {
+            Debug.Log("shit!!");
+        }
     }
 
     public void Start()

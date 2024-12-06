@@ -2074,6 +2074,7 @@ MonoBehaviour:
     describe: 
     levelName: 
   currentWave: 1
+  enemyTextAsset: {fileID: 0}
 --- !u!4 &1060709830
 Transform:
   m_ObjectHideFlags: 0
@@ -4175,6 +4176,11 @@ MonoBehaviour:
   _failPanel: {fileID: 0}
   _successPanel: {fileID: 0}
   _enemy1_Prefab: {fileID: 0}
+  _enemy2_Prefab: {fileID: 0}
+  _enemy3_Prefab: {fileID: 0}
+  _enemy4_Prefab: {fileID: 0}
+  _enemy5_Prefab: {fileID: 0}
+  _redCross_Prefab: {fileID: 0}
   enemy_list: []
   map: {fileID: 0}
   enemy_parent: {fileID: 0}
@@ -4473,6 +4479,67 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1502769524}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &3509145567813603350
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.8
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7582305639947163103, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425369740943693534, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_Name
+      value: RedCross
+      objectReference: {fileID: 0}
+    - target: {fileID: 8425369740943693534, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 338d6ea03636f4fb7bb0d22019d2f1c3, type: 3}
 --- !u!1001 &3638518761573450912
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4550,6 +4617,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8478171250730380644, guid: ffcd5d13b91c6416099e86253633eb0f, type: 3}
+      propertyPath: hp
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 8478171250730380644, guid: ffcd5d13b91c6416099e86253633eb0f, type: 3}
+      propertyPath: provideExp
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8717526161395278623, guid: ffcd5d13b91c6416099e86253633eb0f, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -4607,3 +4682,4 @@ SceneRoots:
   - {fileID: 483202014}
   - {fileID: 2044522896}
   - {fileID: 1060709830}
+  - {fileID: 3509145567813603350}

@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 7922140372431502464}
   - component: {fileID: 3937701695679250594}
   - component: {fileID: 3980046091661666254}
+  - component: {fileID: 4757763161373550806}
   m_Layer: 6
   m_Name: Enemy_2
   m_TagString: Enemy
@@ -145,3 +146,24 @@ MonoBehaviour:
   isContact: 0
   isCooling: 0
   moneyPrefab: {fileID: 0}
+--- !u!95 &4757763161373550806
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2969348502565414241}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: ae4ae96f623d844749765e5405be7ed5, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0

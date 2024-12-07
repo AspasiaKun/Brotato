@@ -118,7 +118,7 @@ public class LevelController : MonoBehaviour
 
     public void GameSuccess() {
         _successPanel.GetComponent<CanvasGroup>().alpha = 1;
-        StartCoroutine(GoMenu());
+        // StartCoroutine(GoMenu());
 
         for (int i=0; i< enemy_list.Count; i++) {
             if (enemy_list[i] != null) {

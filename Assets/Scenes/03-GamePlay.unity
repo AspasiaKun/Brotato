@@ -4576,6 +4576,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_2
       objectReference: {fileID: 0}
+    - target: {fileID: 2969348502565414241, guid: 8a2cf9261868b4bbcaff47683505c212, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4597,6 +4601,10 @@ PrefabInstance:
     - target: {fileID: 2338941070211312761, guid: 3ed86acc1282c4fad80118c4141a3b1f, type: 3}
       propertyPath: m_Name
       value: Enemy_4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2338941070211312761, guid: 3ed86acc1282c4fad80118c4141a3b1f, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6857002190092030876, guid: 3ed86acc1282c4fad80118c4141a3b1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4695,6 +4703,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_5
       objectReference: {fileID: 0}
+    - target: {fileID: 8539968904146806095, guid: 161becda6a108463aa9afd7a8bf991f9, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -4773,6 +4785,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Money
       objectReference: {fileID: 0}
+    - target: {fileID: 337133301733543011, guid: 554640375b97e47789ffe43452360cbb, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3195687440049339397, guid: 554640375b97e47789ffe43452360cbb, type: 3}
       propertyPath: m_IsTrigger
       value: 1
@@ -4834,6 +4850,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Enemy_3
       objectReference: {fileID: 0}
+    - target: {fileID: 4120713588322153809, guid: ad41f187d74794553af262562a83c009, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7932346620868951666, guid: ad41f187d74794553af262562a83c009, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.72
@@ -4893,7 +4913,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5027599722213962406, guid: ffcd5d13b91c6416099e86253633eb0f, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8478171250730380644, guid: ffcd5d13b91c6416099e86253633eb0f, type: 3}
       propertyPath: hp

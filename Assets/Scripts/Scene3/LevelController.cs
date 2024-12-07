@@ -90,20 +90,7 @@ public class LevelController : MonoBehaviour
                 EnemyBase enemy = Instantiate(enemyPrefabsDic[enemyData.enemyName],spawnPoint,Quaternion.identity,enemy_parent).GetComponent<EnemyBase>();
                 enemy_list.Add(enemy);
             }
-
         }
-
-        // while(waveTimer >=0 && !Player.instance.isDead) {
-        //     yield return new WaitForSeconds(0.5f);
-            
-        //     Bounds bounds = map.GetComponent<SpriteRenderer>().bounds;
-        //     Vector3 spawnPoint = GetRandomPoint(bounds);
-        //     // 敌人重生
-        //     Instantiate(_redCross_Prefab, spawnPoint, Quaternion.identity);
-        //     // EnemyBase go = Instantiate(_enemy1_Prefab, spawnPoint, Quaternion.identity, enemy_parent).GetComponent<EnemyBase>();
-        //     // enemy_list.Add(go);
-
-        // }
     }
 
     private Vector3 GetRandomPoint(Bounds bounds)
@@ -135,13 +122,12 @@ public class LevelController : MonoBehaviour
 
         for (int i=0; i< enemy_list.Count; i++) {
             if (enemy_list[i] != null) {
-                enemy_list[i].Dead(); // todo: 应该是消失
+                enemy_list[i].Vanish();
             }
         }
     }
 
     // 游戏失败
-
     public void GameFailed() {
         _failPanel.GetComponent<CanvasGroup>().alpha = 1;
         StartCoroutine(GoMenu());

@@ -46,7 +46,7 @@ public class GamePanel : MonoBehaviour
     public void RenewEXP()
     {
         // 每级固定经验为12
-        _grand.text = "Lv. " + Player.instance.exp / 12;
+        _grand.text = "Lv. " + (int)Player.instance.exp / 12;
         _expSlider.value = Player.instance.exp % 12 / 12;
     }
 

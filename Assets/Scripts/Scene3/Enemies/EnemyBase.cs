@@ -67,7 +67,13 @@ public class EnemyBase : MonoBehaviour
 
         Player.instance.exp += provideExp;
         GamePanel.instance.RenewMoney();
+        GamePanel.instance.RenewEXP();
 
+        Destroy(gameObject);
+    }
+
+    // 消失，用于每一波时间结束之后，怪物直接消失，不提供经验与金钱
+    public void Vanish() {
         Destroy(gameObject);
     }
     // Start is called before the first frame update

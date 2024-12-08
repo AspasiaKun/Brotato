@@ -6,15 +6,15 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public static Player instance;
+    public PlayerProp playerProp = new PlayerProp();
     public float _Speed = 5f;
     public Transform _playerVisual;
 
     public Animator _anim;
     
-    public float hp = 15f;
+    public float hp;
     public bool isDead = false;
     public int money = 30;
-    public float maxHp = 15f;
     public float exp = 0;
     private float _oldHorizontal = 0;
     private float _nowHorizontal = 0;
@@ -25,6 +25,7 @@ public class Player : MonoBehaviour
         instance = this;
         _playerVisual = Utils.Instance.findGameObject("PlayerVisual").transform;
         _anim = _playerVisual.GetComponent<Animator>();
+        hp = playerProp.maxHp;
     }
 
     // Start is called before the first frame update
@@ -75,7 +76,7 @@ public class Player : MonoBehaviour
     }
 
     public void Attack() {
-        
+
     }
 
     public void Injured(float attack) {

@@ -52,8 +52,8 @@ public class GamePanel : MonoBehaviour
 
     public void RenewHP()
     {
-        _hp.text = Player.instance.hp.ToString() + '/' + Player.instance.maxHp.ToString();
-        _hpSlider.value = Player.instance.hp / Player.instance.maxHp;
+        _hp.text = Player.instance.hp.ToString() + '/' + Player.instance.playerProp.maxHp.ToString();
+        _hpSlider.value = Player.instance.hp / Player.instance.playerProp.maxHp;
     }
 
     // Update is called once per frame

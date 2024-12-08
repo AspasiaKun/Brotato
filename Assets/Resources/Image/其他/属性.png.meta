@@ -176,7 +176,7 @@ TextureImporter:
         width: 38
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,7 +197,7 @@ TextureImporter:
         width: 36
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,7 +218,7 @@ TextureImporter:
         width: 38
         height: 34
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,7 +239,7 @@ TextureImporter:
         width: 38
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,7 +260,7 @@ TextureImporter:
         width: 37
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,7 +281,7 @@ TextureImporter:
         width: 38
         height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,7 +302,7 @@ TextureImporter:
         width: 33
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,15 +315,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u5C5E\u6027_7"
+      name: "\u5C5E\u6027_8"
       rect:
         serializedVersion: 2
         x: 0
-        y: 227
+        y: 267
         width: 39
-        height: 78
+        height: 38
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,15 +336,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u5C5E\u6027_8"
+      name: "\u5C5E\u6027_7"
       rect:
         serializedVersion: 2
-        x: 4
+        x: 1
         y: 305
-        width: 33
-        height: 38
+        width: 36
+        height: 39
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,15 +357,15 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u5C5E\u6027_9"
+      name: "\u5C5E\u6027_10"
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 191
         width: 37
         height: 35
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,7 +378,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u5C5E\u6027_10"
+      name: "\u5C5E\u6027_11"
       rect:
         serializedVersion: 2
         x: 1
@@ -386,7 +386,7 @@ TextureImporter:
         width: 38
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -399,7 +399,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u5C5E\u6027_11"
+      name: "\u5C5E\u6027_12"
       rect:
         serializedVersion: 2
         x: 1
@@ -407,7 +407,7 @@ TextureImporter:
         width: 37
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -420,7 +420,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u5C5E\u6027_12"
+      name: "\u5C5E\u6027_13"
       rect:
         serializedVersion: 2
         x: 1
@@ -428,7 +428,7 @@ TextureImporter:
         width: 38
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -441,7 +441,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u5C5E\u6027_13"
+      name: "\u5C5E\u6027_14"
       rect:
         serializedVersion: 2
         x: 1
@@ -449,7 +449,7 @@ TextureImporter:
         width: 38
         height: 40
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -462,7 +462,7 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "\u5C5E\u6027_14"
+      name: "\u5C5E\u6027_15"
       rect:
         serializedVersion: 2
         x: 2
@@ -470,7 +470,7 @@ TextureImporter:
         width: 35
         height: 37
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -482,10 +482,31 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: "\u5C5E\u6027_9"
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 228
+        width: 39
+        height: 38
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7d6619df4021f4becbb0637c5b80df07
+      internalID: 2014310438
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 0a777d49d40854a00a3761642145290f
     internalID: 0
     vertices: []
     indices: 
@@ -495,19 +516,20 @@ TextureImporter:
     nameFileIdTable:
       "\u5C5E\u6027_0": -6876742758057078468
       "\u5C5E\u6027_1": 7211737177903637789
-      "\u5C5E\u6027_10": 2157112201401541167
-      "\u5C5E\u6027_11": 1388358141566211592
-      "\u5C5E\u6027_12": 3672390581817234753
-      "\u5C5E\u6027_13": -3239572487738323867
-      "\u5C5E\u6027_14": -2779628659576451802
+      "\u5C5E\u6027_10": -7433100274497262451
+      "\u5C5E\u6027_11": 2157112201401541167
+      "\u5C5E\u6027_12": 1388358141566211592
+      "\u5C5E\u6027_13": 3672390581817234753
+      "\u5C5E\u6027_14": -3239572487738323867
+      "\u5C5E\u6027_15": -2779628659576451802
       "\u5C5E\u6027_2": 2438249679122832285
       "\u5C5E\u6027_3": -7799153608773162830
       "\u5C5E\u6027_4": -7231289793102688622
       "\u5C5E\u6027_5": 3481591520559958791
       "\u5C5E\u6027_6": -5332859164647878260
-      "\u5C5E\u6027_7": -7358839706727482268
-      "\u5C5E\u6027_8": -6362089710258857648
-      "\u5C5E\u6027_9": -7433100274497262451
+      "\u5C5E\u6027_7": -6362089710258857648
+      "\u5C5E\u6027_8": -7358839706727482268
+      "\u5C5E\u6027_9": 2014310438
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

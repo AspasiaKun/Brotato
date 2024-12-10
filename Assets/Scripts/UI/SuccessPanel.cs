@@ -376,24 +376,25 @@ public class SuccessPanel: MonoBehaviour {
             // todo：给道具
         }
         else {
+            // todo：按提升等级次数刷新
             refreshButton.onClick.AddListener( () => {
-                showRandomProps();
+                showRandomProps(currentLevel);
             });
             prop_1 = Instantiate(propPrefab, propLevelUpParent);
             prop_2 = Instantiate(propPrefab, propLevelUpParent);
             prop_3 = Instantiate(propPrefab, propLevelUpParent);
             prop_4 = Instantiate(propPrefab, propLevelUpParent);
             // 随机仅改变四个实体的属性值，因此四个实体可以先生成，便于后续刷新
-            showRandomProps();
+            showRandomProps(currentLevel);
         }
 
         // 最后将当前等级记录下来
         lastLevel = currentLevel;
     }
 
-    public void showRandomProps() {
+    public void showRandomProps(int currentLevel) {
         // 获取随机属性
-        List<UpgradeProps> randomPropsList = propManager.GetRandomProps(4);
+        List<UpgradeProps> randomPropsList = propManager.GetRandomProps(4, currentLevel);
         
         // 修改每一个GO的显示ui
         UpdatePropUI(prop_1, randomPropsList[0]);

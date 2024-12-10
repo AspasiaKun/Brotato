@@ -424,6 +424,9 @@ public class SuccessPanel: MonoBehaviour {
         // 修改图标
         Image avatar = prop.transform.Find("Avatar").transform.Find("Avatar_Prop").GetComponent<Image>();
         avatar.sprite = Resources.Load<Sprite>(upgradeProps._iconPath);
+        // 修改描述
+        TextMeshProUGUI propDetail = prop.transform.Find("Prop_Detail").GetComponent<TextMeshProUGUI>();
+        propDetail.text = "<color=#00FF00>+" + upgradeProps._getValue(upgradeProps._rarity) + "</color> " + upgradeProps._description;
 
     }
 }

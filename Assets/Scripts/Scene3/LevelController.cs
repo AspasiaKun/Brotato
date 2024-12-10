@@ -117,8 +117,9 @@ public class LevelController : MonoBehaviour
     }
 
     public void GameSuccess() {
+        int currentWaveLevel = Player.instance.playerProp.level;
         _successPanel.GetComponent<CanvasGroup>().alpha = 1;
-        // StartCoroutine(GoMenu());
+        SuccessPanel.instance.UpdatePanelAfterSuccess(currentWaveLevel);
 
         for (int i=0; i< enemy_list.Count; i++) {
             if (enemy_list[i] != null) {

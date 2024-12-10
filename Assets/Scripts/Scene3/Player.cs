@@ -15,7 +15,6 @@ public class Player : MonoBehaviour
     public float hp;
     public bool isDead = false;
     public int money = 30;
-    public float exp = 0;
     private float _oldHorizontal = 0;
     private float _nowHorizontal = 0;
     private int _turnSign = 1;
@@ -106,5 +105,14 @@ public class Player : MonoBehaviour
             GamePanel.instance.RenewMoney();
         }
 
+    }
+
+    internal void RenewLevel()
+    {
+        // 在这里统一计算角色等级与剩余经验
+        int level = (int)playerProp.exp / 6;
+        Player.instance.playerProp.level = level;
+        
+        GamePanel.instance.RenewEXP(level, Player.instance.playerProp.exp % 6 / 6);
     }
 }

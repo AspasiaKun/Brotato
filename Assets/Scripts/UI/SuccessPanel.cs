@@ -28,12 +28,13 @@ public class SuccessPanel: MonoBehaviour {
     private GameObject harvestItem;
     private GameObject propPrefab;
     private Transform propLevelUpParent;
-    UpgradePropsManager propManager = new UpgradePropsManager();
-    GameObject prop_1;
-    GameObject prop_2;
-    GameObject prop_3;
-    GameObject prop_4;
-    Button refreshButton;
+    private UpgradePropsManager propManager = UpgradePropsManager.Instance;
+    private GameObject prop_1;
+    private GameObject prop_2;
+    private GameObject prop_3;
+    private GameObject prop_4;
+    private Button refreshButton;
+    public int lastLevel = 0;
     void Awake() {
         instance = this;
 
@@ -286,10 +287,9 @@ public class SuccessPanel: MonoBehaviour {
 
     private void UpdateUI(string propertyName, object value)
     {
-        Debug.Log("shit!");
         switch (propertyName) {
             case nameof(playerProp.level):
-                SetPropUI(levelItem, (float)value, 0); // 不同属性的基础阈值不一样，超过才显示绿色，不足显示红色
+                SetPropUI(levelItem, (int)value, 0); // 不同属性的基础阈值不一样，超过才显示绿色，不足显示红色
                 break;
             case nameof(playerProp.maxHp):
                 SetPropUI(maxhpItem, (float)value, 10);
@@ -362,20 +362,33 @@ public class SuccessPanel: MonoBehaviour {
     void Start() {
         playerProp = Player.instance.playerProp;
         playerProp.OnPropertyChanged += UpdateUI;
-        refreshButton.onClick.AddListener( () => {
-            showRandomProps();
-        });
-        prop_1 = Instantiate(propPrefab, propLevelUpParent);
-        prop_2 = Instantiate(propPrefab, propLevelUpParent);
-        prop_3 = Instantiate(propPrefab, propLevelUpParent);
-        prop_4 = Instantiate(propPrefab, propLevelUpParent);
-        // 随机仅改变四个实体的属性值，因此四个实体可以先生成，便于后续刷新
-        showRandomProps();
 
     }
 
     void Update() {
         
+    }
+    
+    public void UpdatePanelAfterSuccess(int currentLevel) {
+        // 判断是否有等级提升，如果没有，则给一个道具； 如果有，则显示四个属性供选择
+        // 升级了几次就给几次属性选择
+        if (currentLevel - lastLevel == 0) {
+            // todo：给道具
+        }
+        else {
+            refreshButton.onClick.AddListener( () => {
+                showRandomProps();
+            });
+            prop_1 = Instantiate(propPrefab, propLevelUpParent);
+            prop_2 = Instantiate(propPrefab, propLevelUpParent);
+            prop_3 = Instantiate(propPrefab, propLevelUpParent);
+            prop_4 = Instantiate(propPrefab, propLevelUpParent);
+            // 随机仅改变四个实体的属性值，因此四个实体可以先生成，便于后续刷新
+            showRandomProps();
+        }
+
+        // 最后将当前等级记录下来
+        lastLevel = currentLevel;
     }
 
     public void showRandomProps() {

@@ -31,7 +31,7 @@ public class GamePanel : MonoBehaviour
     {
         RenewHP();
 
-        RenewEXP();
+        RenewEXP(0,0);
 
         RenewMoney();
 
@@ -43,11 +43,10 @@ public class GamePanel : MonoBehaviour
         _money.text = Player.instance.money.ToString();
     }
 
-    public void RenewEXP()
+    public void RenewEXP(int level, float additionExp)
     {
-        // 每级固定经验为12
-        _grand.text = "Lv. " + (int)Player.instance.exp / 12;
-        _expSlider.value = Player.instance.exp % 12 / 12;
+        _grand.text = "Lv. " + level;
+        _expSlider.value = additionExp;
     }
 
     public void RenewHP()

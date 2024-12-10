@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using System;
 
 public class UpgradePropsManager {
+    private static readonly UpgradePropsManager _instance = new UpgradePropsManager();
+    private UpgradePropsManager() {}
+    public static UpgradePropsManager Instance => _instance;
     private List<UpgradeProps> upgradePropsList = new List<UpgradeProps>();
 
     public void AddUpgradeProp(UpgradeProps props) {

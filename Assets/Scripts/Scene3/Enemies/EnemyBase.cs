@@ -65,9 +65,8 @@ public class EnemyBase : MonoBehaviour
     public void Dead() {
         Instantiate(moneyPrefab, transform.position, Quaternion.identity);
 
-        Player.instance.exp += provideExp;
+        Player.instance.playerProp.exp += provideExp;
         GamePanel.instance.RenewMoney();
-        GamePanel.instance.RenewEXP();
 
         Destroy(gameObject);
     }

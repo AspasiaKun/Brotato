@@ -17,7 +17,13 @@ public class PlayerProp {
     private float _exp = 0;
     public float exp {
         get {return _exp;}
-        set {_exp = value;}
+        set {
+            if (_exp != value)
+            {
+                _exp = value;
+                Player.instance.RenewLevel();
+            }
+            }
     }
     private float _maxHp = 10;
     public float maxHp {
